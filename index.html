@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tela de Login</title>
+    <style>
+        .forgot-password {
+            display: none;
+        }
+
+        .forgot-password .white-text {
+            color: white; /* Define a cor do texto como branca */
+        }
+    </style>
+</head>
+
+<!-- Tela de recuperação de LOGIN -->
+<body>
+    <form class="login">
+        <h2>Login</h2>
+        <style>
+            .white-text-input {
+                color: white;
+            }
+        </style>
+        <div class="box-user">
+            <input type="text" name="" required class="white-text-input">
+            <label>Usuário</label>
+        </div>
+        <div class="box-user">
+            <input type="password" name="" required class="white-text-input">
+            <label>Senha</label>
+        </div>
+        <div>
+            <a href="#" class="forget" id="forgot-link">Esqueceu a Senha?</a>
+        </div>
+        <a href="#" class="btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Entrar
+        </a>
+    </form>
+
+    <!-- Tela de recuperação de senha -->
+    <div class="forgot-password" id="forgot-password">
+        <h2 class="white-text">Recuperar Senha</h2>
+        <p class="white-text">Informe seu e-mail abaixo:</p>
+        <div class="box-user">
+            <input type="email" name="" required>
+            
+        </div>
+        <button class="btn">Enviar Email de Recuperação</button>
+        <a href="#" class="forget" id="back-to-login">Voltar ao Login</a>
+    </div>
+
+    <script>
+        const forgotLink = document.getElementById("forgot-link");
+        const forgotPassword = document.getElementById("forgot-password");
+        const backToLogin = document.getElementById("back-to-login");
+
+        forgotLink.addEventListener("click", () => {
+            // Exibe a tela de recuperação de senha e oculta o formulário de login
+            forgotPassword.style.display = "block";
+            document.querySelector(".login").style.display = "none";
+        });
+
+        backToLogin.addEventListener("click", () => {
+            // Exibe o formulário de login e oculta a tela de recuperação de senha
+            forgotPassword.style.display = "none";
+            document.querySelector(".login").style.display = "block";
+        });
+    </script>
+</body>
+</html>
