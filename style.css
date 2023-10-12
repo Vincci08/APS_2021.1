@@ -11,7 +11,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #172031;  
+    background: #485876;  
 }
 .login{
     background: rgba(0,0,0,.5);
@@ -185,7 +185,7 @@ body{
     border: 0;
     background: transparent;
     border-bottom: 1px solid #fff;
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 30px;
     color: white;
 }
@@ -195,7 +195,7 @@ body{
     top: 0;
     left: 0;
     padding: 10px 0;
-    font-size: 16px;
+    font-size: 12px;
     pointer-events: none;
     transition: .5s;
     color: white;
